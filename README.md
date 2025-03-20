@@ -29,16 +29,18 @@ Installation
 3. Open `index.html` in your browser to run the application.
 
 4. /Spotify clone
-│── public/
-│   │── index.html  # Main page
-│   │── styles.css  # Styling
-│   │── script.js   # JavaScript for quiz logic
-│── src/
-│   │── leaderboard.js  # Leaderboard functionality
-│── assets/     # Images, icons, etc.
-│── database/   # Database files (if applicable)
-│── backend/    # Backend files (if applicable)
-│── README.md   # Project documentation
+/vocabulary-game  
+│── public/  
+│   │── index.html     # Main page  
+│   │── styles.css     # Styling  
+│   │── script.js      # JavaScript for quiz logic  
+│── src/  
+│   │── leaderboard.js # Leaderboard functionality  
+│── assets/           # Images, icons, etc.  
+│── database/         # Database files (if applicable)  
+│── backend/          # Backend files (if applicable)  
+│── README.md         # Project documentation  
+
 
 Usage
 - Open the application in your browser.
