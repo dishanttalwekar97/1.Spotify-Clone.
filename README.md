@@ -37,8 +37,6 @@ Installation
 │── src/  
 │   │── leaderboard.js # Leaderboard functionality  
 │── assets/           # Images, icons, etc.  
-│── database/         # Database files (if applicable)  
-│── backend/          # Backend files (if applicable)  
 │── README.md         # Project documentation  
 
 
