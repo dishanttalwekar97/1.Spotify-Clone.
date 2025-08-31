@@ -57,7 +57,7 @@ async function getsong(folder) {
 
 // Play music
 const playmusic = (track, pause = false) => {
-    currentsong.src = `${currfolder}/` + track;
+    currentsong.src = `${currfolder}/` + track;  // removed leading /
     if (!pause) {
         currentsong.play();
         document.querySelector("#play").src = "/svg/pause.svg";
@@ -66,6 +66,7 @@ const playmusic = (track, pause = false) => {
     document.querySelector(".songinfo").innerText = decodeURI(track);
     document.querySelector(".songtime").innerText = "00:00 / 00:00";
 };
+
 
 // Display all albums
 async function displayAlbums() {
@@ -92,7 +93,7 @@ async function displayAlbums() {
                                 <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                             </svg>
                         </div>
-                        <img src="/song/${folder}/cover.jpg" alt="">
+                        <img src="song/${folder}/cover.jpg" alt="">
                         <h2>${meta.title}</h2>
                         <p>${meta.description}</p>
                     </div>`;
@@ -206,7 +207,11 @@ async function main() {
                 document.querySelector(".range").getElementsByTagName("input")[0].value = 10;
             }
     
-        })
+        });
+        let metaResponse = await fetch(`song/${folder}/info.json`);
+let meta = await metaResponse.json();
+song = meta.songs;
+
     
     
 }
