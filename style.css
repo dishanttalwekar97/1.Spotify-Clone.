@@ -107,6 +107,8 @@
 .card-container{
     margin: 30px;
     display: flex;
+        justify-content: center;
+    /* align-items: center; */
     gap: 10px;
     flex-wrap: wrap;
     overflow-y: auto;
